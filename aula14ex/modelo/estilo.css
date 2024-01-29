@@ -1,0 +1,27 @@
+/*escreva CSS todo em letras minusculas*/
+body{
+    background: rgb(116, 171, 230);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white; /* mudando a cor da letra */
+    text-align: center; /* centralizando */
+}
+
+section{
+    background: white;
+    border-radius: 10px;  /* arredondando a borda */
+    padding: 15px; /* aumentar o tamanho disponivel */
+    width: 500px; /* largura*/
+    margin: auto; /*centralizar na tela*/
+    /* 5x de deslocamento lateral, 5px de deslocamento vertical, 10px de espalhamento  */ 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.41);
+   
+}
+
+footer{
+    color: white; /* mudando a cor da letra */
+    text-align: center; /* centralizando */
+    font-style: italic; /* letra em italico */
+}

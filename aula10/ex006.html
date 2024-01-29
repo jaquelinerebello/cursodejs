@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+          background: rgb(145, 177, 145);
+          font: normal 20pt Arial;
+          color: white; 
+          width: 200px;
+          height: 200px;
+          line-height: 200px;
+          text-align: center;
+        }
+    </style>
+</head>
+<body>
+        <div id = "area" onclick="clicar()" onmouseenter="entrar()" onmouseout = "sair()"> <!--criando eventos-->
+            Interaja...
+        </div>    
+
+        <script>
+            var a = window.document.getElementById('area')// a var a é um objeto, aqui ela faz ligação direta com 'area'
+            function clicar() {            //função em JS
+                a.innerText = 'Clicou!'
+                a.style.background = 'red'
+            }
+
+            function entrar() {
+                a.innerText = 'Entrou!'// variavel.innerText
+            } 
+
+            function sair() {
+                a.innerText = 'Saiu!'
+                a.style.background = 'green'// variavel.style.background
+            }
+        </script>
+</body>
+</html>

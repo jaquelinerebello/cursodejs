@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="estilo.css"> <!--esse vai ser um arquivo externo pro CSS-->
+
+    <!--clicando em CTRL do seu teclado e clicar em estilo.css aqui na linha de cima
+    vai dar uma mensagem de erro e vai aparecer um aviso informando,
+    junto com esse aviso vai aparecer um botão para criar esse file, então você cria-->
+    
+    <!--Esse modelo que está aqui é o que vamos usar nos exercicios da aula-->
+</head>
+<body>
+ <header>
+    <h1>Verificador de Idade</h1>
+ </header>  
+ <section>
+    <div>
+        <p>Ano de Nascimento:
+            <input type="number" name="txtano" id="txtano" min="0">
+        </p>  
+        <p>Sexo:
+            <input type="radio" name="radsex" id="mas" checked> <!--"radio" é a bolotinha pra dar o check(selecionar)-->
+            <label for="mas">Masculino</label>
+            <input type="radio" name="radsex" id="fem">  <!--o name"radsex" para input type="radio"se repete pro 'mas' e 'fem' porque se for diferente na hora de selecionar entre um e outro ele vai permitir selecionar ambos dando um erro no programa, então não dá para selecionar por id, por seletor, vai ter que selecionar por .getElementsByName-->
+            <label for="fem">Feminino</label>
+        </p>   
+        <p>
+            <input type="button" value="Verificar" onclick="verificar()">
+        </p>
+    </div>
+       
+    <div id="res">
+        Preencha os dados acima para ver o resultado!
+    </div>
+ </section> 
+ <footer>
+    <p>&copy; CursoemVideo</p>
+ </footer>
+    <script src="script.js"> // aqui criei um link pra um arquivo JS
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!--CRIE um site do exercicio 009.js assim como fizemos na aula 11 onde criamos o site do 008.js em ex10.html-->
+<!--lembrando que nesse caso não precisa converter os dados recebidos porque a caixa já te retorna texto-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+</head>
+<body>
+    <h1>Identificando o país de origem</h1> <!--titulo-->   
+       País de Origem: <input type="text" name="txtpais" id="txtpais" > <!--inserindo uma caixa de texto para coletar a resposta do usuário-->
+       <!-- <input type="text" name="txtpais" id="txtpais" disabled> --> <!--disabled é uma propriedade-->
+       <input type="button" value="Verificar" onclick="localizar()"> <!-- acrescentei botão pra verificar resposta usuário, o nome desse botão, o evento que está associado ao botão e a função que vou executar quando ouver o click-->
+       <div id="resultado"> <!-- será usado para mostrar a resposta na tela-->
+
+       </div> 
+       <script>
+            function localizar() {
+                var pais = window.document.querySelector('input#txtpais') //acessando para dar acesso desse input a var
+                var res = window.document.querySelector('div#resultado')// fazendo uma ponte pra ligar a div ao JS
+                
+                //value é o conteudo de texto referente ao input
+                // var pais_nome = pais.value // aqui eu posso colocar o texto em uma variavel ou fazer var.value para mostrar o texto que ela contém
+                res.innerHTML = `<p>Vivendo em ${pais.value}!</p>` // value é um atributo
+                if (pais.value != 'brasil') { 
+                        res.innerHTML += `<p>Vocé é <strong> ESTRANGEIRO </strong></p>` 
+                } else {
+                        res.innerHTML += `<p>Você é <strong> BRASILEIRO </strong> </p>`
+                }
+            }
+        </script>
+    </body>
+</html>

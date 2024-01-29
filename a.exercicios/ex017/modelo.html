@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titulo">Tabuada</title>  <!--colocando id na tag você pode modifica-la através do id lá no JS-->
+    <link rel="stylesheet" href="estilo.css"> <!--esse vai ser um arquivo externo pro CSS-->
+
+    <!--clicando em CTRL do seu teclado e clicar em estilo.css aqui na linha de cima
+    vai dar uma mensagem de erro e vai aparecer um aviso informando,
+    junto com esse aviso vai aparecer um botão para criar esse file, então você cria-->
+    
+    <!--Esse modelo que está aqui é o que vamos usar nos exercicios da aula-->
+</head>
+<body>
+ <header>
+    <h1>Tabuada</h1>
+ </header>  
+ <section>
+    <div id="num">
+        <p>Número: <input type="number" name="numb" id="txtn"> <input type="button" value="Gerar Tabuada" onclick="gerartabuada()"></p>
+    </div >
+        
+    <div id="mostre_tabuada">
+        <!-- <p>Digite um número acima<input type="" name="cxatabu" id="cxatabu" ></p> -->
+        <select size="10" id="cxatabu" >            <!-- a tag select em particular permite editar o size; poderia também trabalhar com style dentro dela modificando o background e a cor ex: <select  style="background-color: red; color: white;">-->    
+            <option >Digite um número acima</option> <!-- tag select cria uma estrutura de lista que vai receber minha tabuada-->
+        </select>
+    </div>
+ </section> 
+ <footer>
+    <p>&copy; CursoemVideo</p>
+ </footer>
+    <script src="script.js"></script> <!-- aqui criei um link pra um arquivo JS -->
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+          background: rgb(145, 177, 145);
+          font: normal 20pt Arial;
+          color: white; 
+          width: 200px;
+          height: 200px;
+          line-height: 200px;
+          text-align: center;
+        }
+    </style>
+</head>
+<body>
+        <div id = "area">
+            Interaja...
+        </div>    
+
+        <!--Aqui nesse exemplo os eventos foram adicionados dentro do JS <script>, em 3 linhas distintas pra cada um, enquanto que no exemplo do
+            exercício anterior o ex006.html, foi acrescentado no html, dentro da tag <div> -->
+        <script>
+            var a = window.document.getElementById('area')// a var a é um objeto
+            a.addEventListener('click', clicar) // objeto.addEventListener ('nome do evento', function)
+            a.addEventListener('mouseenter', entrar) 
+            a.addEventListener('mouseout', sair) 
+
+            /*
+             criei o Listener pra todas as minhas function/ método
+             usando o Listener o html fica limpo, e o JS é quem vai tratar de ligar,
+             então a ligação do html e do JS vai ser feito por essas 3 linhas de EventListener
+            */
+
+            function clicar() {
+                a.innerText = 'Clicou!' // objeto.innerText = 'texto substituto'
+                a.style.background = 'red' // objeto.style.background = 'novacorescolhida'
+            }
+
+            function entrar() {
+                a.innerText = 'Entrou!'
+            } 
+
+            function sair() {
+                a.innerText = 'Saiu!'
+                a.style.background = 'green'
+            }
+        </script>
+</body>
+</html>

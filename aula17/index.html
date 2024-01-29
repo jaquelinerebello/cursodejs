@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte 7</title>
+    <link rel="stylesheet" href="style.css"> <!--chamando o arquivo css-->
+</head>
+<body> <!--Dentro de body vou ter minha estrutura básica do site-->
+<header><h1>Analisador de Números</h1></header> <!-- no cabeçalho coloco meu título-->
+<section>
+    <div> <!--Criei 2 divs/blocos-->
+        <p>Número (entre 1 a 100):
+            <input type="number" name="txtnum" id="txtnum">
+            <input type="button" value="Adicionar" onclick="adicionar()">
+           </p> 
+    </div>
+    <!--1ª div: usuário vai inserir números-->
+    <!--2ª div: vai aparecer os números que o usuário digitou e ele vai ter opção de finalizar-->
+    <div>
+        <br><select size="5" id="shownum"> <!--tamanho/altura da caixa select-->
+        </select>
+        <p><input type="button" value="Finalizar" onclick="finalizar()"></p>
+    </div>
+    <div id="resultado">
+
+    </div>
+</section> 
+<footer>&copy; Jaqueline Rebêllo</footer> <!--rodapé do meu site-->
+<script src="script.js"></script>    <!--chamando meu arquivo js-->
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!--Já que é site o arquivo levou .html no final de seu nome-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>  
+     <!--o nome é muito útil para outras linguagens por isso o professor
+        não tirou, mas aqui vamos trabalhar com id pra facilitar o js--> 
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>   
+        <script>
+            /* vai ser a ligação do JS com a caixa de texto txtvel
+            var txtv = window.document.getElementById('txtvel') */
+
+            function calcular() {
+             /* você pode usar como opção no lugar do getElementById
+             o querySelector (seletor do JS) como mostra aqui abaixo*/
+            var txtv = window.document.querySelector('input#txtvel')   
+            var res = window.document.querySelector('div#res') // id é com #, classa é com . pra CSS
+            var vel = Number(txtv.value) // vamos jogar o value(valor) que tem no txtv na var vel    
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel} Km/h</strong></p>`
+            
+            if (vel > 60) { // o sinal += aqui é pra mostrar a mensagem aqui dentro sem apagar a anterior!
+                res.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade!`
+            }
+            
+            //o sinal de += aqui está concatenando, ou seja, juntando strings, nesse caso concatenando com outro parágrafo
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>` 
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+            body {
+                background: rgb(158, 126, 180);
+                color: white;
+                font: normal 18pt Arial;
+                
+            }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>  
+    <p>Aqui vai o resultado</p> 
+    <p>Aprendendo a usar <strong> DOM </strong> em JavaScript</p>
+    <!-- <div>Clique em mim</div> -->
+     <!-- Posso pegar a minha div e ao invés de utilizar o getElementsByTagName que as vezes
+    pode ser muito genérico por ter muitas tags div e pode te prejudicar, você dá um ID pra essa div -->
+
+    <!-- <div id = "msg">Clique em mim</div> --> <!-- Ou posso selecionar por nome como aqui na linha de baixo -->
+    <!-- <div name = "msg">Clique em mim</div> -->
+    <!-- <div class = "msg">Clique em mim</div> -->
+
+
+    <script>
+        // as modificações feitas nessa aula são por meio do uso do DOM
+
+        /*
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green' 
+        d.innerText = 'Estou aguardando'
+        */ 
+
+        /* 
+            var d = window.document.getElementsByName('msg')[0]   
+        d.innerText = 'Olá'    
+        */
+
+        //window.document.getElementsByClassName
+
+        var d = window.document.querySelector('div#msg')
+        // d.style.color = 'blue'
+        // d.style.background = 'blue'
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var corpo = window.document.body // var que faz referência ao corpo
+
+       // p1.style.color = 'blue' // é possível também modificar a cor de um trecho específico do texto
+       // corpo.style.background = 'black' // usando a var corpo que criei ali encima para modificar a cor de body
+
+        /* esse comando vai selecionar elementos,
+         o 'p' é o pagráfo, o [numero do paragrafo aqui]
+         tem que colocar o número do parágrafo porque
+         pode conter mais de um
+         esse [numero], vai ser usado principalmente quando está no plural (Elements)*/
+
+        //window.document.write('Está escrito assim: ' + p1.innerText) // innerText é o texto que está dentro do parágrafo
+
+        // para mostrar meu set de caracteres: window.document.write(window.document.charset) 
+        //window.document.write(window.navigator.appName) 
+       // mostra a url que estou acessando: window.document.write(window.document.URL)
+
+      // document.write(p1.innerText) // aqui o comando mostra o texto sem formatação
+       //document.write(p1.innerHTML) // aqui o comando inner vai mostrar o texto com a formatação
+       //window.alert(p1.innerHTML) //  o alerta mostra completo ate a tag que usou na formatação
+       //window.alert(p1.innerText) // o alerta mostra sem a formatação
+    
+    </script>
+</body>
+</html> 
